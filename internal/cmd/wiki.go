@@ -17,6 +17,7 @@ func newWikiCmd() *cobra.Command {
 		newWikiNodeCreateCmd(),
 		newWikiNodeMoveCmd(),
 		newWikiNodeCopyCmd(),
+		newWikiResolveCmd(),
 	)
 
 	return wikiCmd

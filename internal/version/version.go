@@ -4,7 +4,7 @@ import "fmt"
 
 // 通过 ldflags 在编译时注入
 var (
-	Version   = "dev"
+	Version   = "0.2.0"
 	GitCommit = "unknown"
 	BuildDate = "unknown"
 )

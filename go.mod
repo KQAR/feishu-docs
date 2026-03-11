@@ -1,6 +1,6 @@
 module github.com/KQAR/feishu-docs
 
-go 1.26.1
+go 1.23
 
 require (
 	github.com/larksuite/oapi-sdk-go/v3 v3.5.3

@@ -26,6 +26,7 @@ func newDocCmd() *cobra.Command {
 		newDocGetBlockCmd(),
 		newDocInsertBlockCmd(),
 		newDocUpdateBlockCmd(),
+		newDocUpdateV2Cmd(),
 		newDocDeleteBlocksCmd(),
 	)
 
