@@ -1,6 +1,6 @@
 version: 2
 
-project_name: feishu-docs
+project_name: feishu-docs-cli
 
 before:
   hooks:
@@ -8,12 +8,12 @@ before:
 
 builds:
   - main: .
-    binary: feishu-docs
+    binary: feishu-docs-cli
     ldflags:
       - -s -w
-      - -X github.com/KQAR/feishu-docs/internal/version.Version={{.Version}}
-      - -X github.com/KQAR/feishu-docs/internal/version.GitCommit={{.ShortCommit}}
-      - -X github.com/KQAR/feishu-docs/internal/version.BuildDate={{.Date}}
+      - -X github.com/KQAR/feishu-docs-cli/internal/version.Version={{.Version}}
+      - -X github.com/KQAR/feishu-docs-cli/internal/version.GitCommit={{.ShortCommit}}
+      - -X github.com/KQAR/feishu-docs-cli/internal/version.BuildDate={{.Date}}
     goos:
       - darwin
       - linux
@@ -42,10 +42,10 @@ brews:
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
     directory: Formula
-    homepage: https://github.com/KQAR/feishu-docs
+    homepage: https://github.com/KQAR/feishu-docs-cli
     description: 飞书文档与知识库 CLI 管理工具
     license: MIT
     install: |
-      bin.install "feishu-docs"
+      bin.install "feishu-docs-cli"
     test: |
-      system "#{bin}/feishu-docs", "version"
+      system "#{bin}/feishu-docs-cli", "version"

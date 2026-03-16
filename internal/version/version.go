@@ -11,5 +11,5 @@ var (
 
 // Full 返回完整版本信息
 func Full() string {
-	return fmt.Sprintf("feishu-docs %s (commit: %s, built: %s)", Version, GitCommit, BuildDate)
+	return fmt.Sprintf("feishu-docs-cli %s (commit: %s, built: %s)", Version, GitCommit, BuildDate)
 }

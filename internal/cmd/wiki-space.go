@@ -7,7 +7,7 @@ import (
 
 	larkwiki "github.com/larksuite/oapi-sdk-go/v3/service/wiki/v2"
 
-	"github.com/KQAR/feishu-docs/internal/output"
+	"github.com/KQAR/feishu-docs-cli/internal/output"
 )
 
 func newWikiSpaceListCmd() *cobra.Command {

@@ -2,7 +2,7 @@ package client
 
 import (
 	lark "github.com/larksuite/oapi-sdk-go/v3"
-	"github.com/KQAR/feishu-docs/internal/config"
+	"github.com/KQAR/feishu-docs-cli/internal/config"
 )
 
 // New 根据配置创建飞书 SDK 客户端

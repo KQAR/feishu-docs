@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 
 	larkdocx "github.com/larksuite/oapi-sdk-go/v3/service/docx/v1"
-	"github.com/KQAR/feishu-docs/internal/output"
+	"github.com/KQAR/feishu-docs-cli/internal/output"
 )
 
 func newDocUpdateV2Cmd() *cobra.Command {
@@ -32,7 +32,7 @@ func newDocUpdateV2Cmd() *cobra.Command {
   普通文本
 
 示例:
-  feishu-docs doc update-v2 --doc-id DOC_ID --markdown "# 新标题\n\n正文内容"`,
+  feishu-docs-cli doc update-v2 --doc-id DOC_ID --markdown "# 新标题\n\n正文内容"`,
 		Run: func(cmd *cobra.Command, args []string) {
 			blocks := parseMarkdownToBlocks(markdown)
 

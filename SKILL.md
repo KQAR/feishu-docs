@@ -1,6 +1,6 @@
-# feishu-docs CLI 技能
+# feishu-docs-cli CLI 技能
 
-基于 [KQAR/feishu-docs](https://github.com/KQAR/feishu-docs) CLI 工具的飞书文档操作技能。
+基于 [KQAR/feishu-docs-cli](https://github.com/KQAR/feishu-docs-cli) CLI 工具的飞书文档操作技能。
 
 ## 功能特性
 
@@ -16,21 +16,21 @@
 
 ```bash
 # Linux ARM64 (iSH 环境)
-curl -sL -o /usr/local/bin/feishu-docs \
-  "https://github.com/KQAR/feishu-docs/releases/download/v0.2.0/feishu-docs_0.2.0_linux_arm64.tar.gz"
-tar -xzf /usr/local/bin/feishu-docs -C /usr/local/bin/
-chmod +x /usr/local/bin/feishu-docs
+curl -sL -o /usr/local/bin/feishu-docs-cli \
+  "https://github.com/KQAR/feishu-docs-cli/releases/download/v0.2.0/feishu-docs-cli_0.2.0_linux_arm64.tar.gz"
+tar -xzf /usr/local/bin/feishu-docs-cli -C /usr/local/bin/
+chmod +x /usr/local/bin/feishu-docs-cli
 ```
 
 ### 配置
 
 ```bash
 # 初始化配置
-feishu-docs init
+feishu-docs-cli init
 
 # 编辑配置文件
-# 路径: ~/config/feishu-docs/config.json
-cat > ~/config/feishu-docs/config.json << EOF
+# 路径: ~/.config/feishu-docs/config.json
+cat > ~/.config/feishu-docs/config.json << EOF
 {
   "app_id": "YOUR_APP_ID",
   "app_secret": "YOUR_APP_SECRET"
@@ -44,38 +44,38 @@ EOF
 
 ```bash
 # 创建文档
-feishu-docs doc create --title "AI周报" --folder-token Fldxxx
+feishu-docs-cli doc create --title "AI周报" --folder-token Fldxxx
 
 # 获取文档内容
-feishu-docs doc content --id BuModzb4aoJ9KhxJbN8cnpy6n5g
+feishu-docs-cli doc content --id BuModzb4aoJ9KhxJbN8cnpy6n5g
 
 # 列出文档块
-feishu-docs doc blocks --id BuModzb4aoJ9KhxJbN8cnpy6n5g
+feishu-docs-cli doc blocks --id BuModzb4aoJ9KhxJbN8cnpy6n5g
 
 # 插入内容
-feishu-docs doc insert --doc-id DOC_ID --text "新段落" --type text
-feishu-docs doc insert --doc-id DOC_ID --text "## 标题" --type heading2
+feishu-docs-cli doc insert --doc-id DOC_ID --text "新段落" --type text
+feishu-docs-cli doc insert --doc-id DOC_ID --text "## 标题" --type heading2
 
 # 高级更新模式
-feishu-docs doc update-v2 --doc-id DOC_ID --mode append --markdown "追加内容"
-feishu-docs doc update-v2 --doc-id DOC_ID --mode replace_all --markdown "新内容" --selection-by-title "## 目标章节"
-feishu-docs doc update-v2 --doc-id DOC_ID --mode delete_range --selection-with-ellipsis "开始...结束"
+feishu-docs-cli doc update-v2 --doc-id DOC_ID --mode append --markdown "追加内容"
+feishu-docs-cli doc update-v2 --doc-id DOC_ID --mode replace_all --markdown "新内容" --selection-by-title "## 目标章节"
+feishu-docs-cli doc update-v2 --doc-id DOC_ID --mode delete_range --selection-with-ellipsis "开始...结束"
 ```
 
 ### Wiki 操作
 
 ```bash
 # 解析 wiki 链接
-feishu-docs wiki resolve --url "https://xxx.feishu.cn/wiki/ABC123"
+feishu-docs-cli wiki resolve --url "https://xxx.feishu.cn/wiki/ABC123"
 
 # 列出知识空间
-feishu-docs wiki spaces
+feishu-docs-cli wiki spaces
 
 # 获取节点信息
-feishu-docs wiki node --token NODE_TOKEN
+feishu-docs-cli wiki node --token NODE_TOKEN
 
 # 创建 wiki 节点
-feishu-docs wiki create --space-id SPACE_ID --title "新页面" --obj-type docx
+feishu-docs-cli wiki create --space-id SPACE_ID --title "新页面" --obj-type docx
 ```
 
 ## 更新模式详解

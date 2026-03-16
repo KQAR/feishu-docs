@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 )
 
-const defaultConfigPath = "config/feishu-docs/config.json"
+const defaultConfigPath = ".config/feishu-docs/config.json"
 
 // Config 飞书应用配置
 type Config struct {
@@ -15,7 +15,7 @@ type Config struct {
 	AppSecret string `json:"app_secret"`
 }
 
-// Load 从 ~/config/feishu-docs/config.json 加载配置
+// Load 从 ~/.config/feishu-docs/config.json 加载配置
 func Load() (*Config, error) {
 	homeDir, err := os.UserHomeDir()
 	if err != nil {

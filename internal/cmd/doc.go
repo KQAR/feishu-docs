@@ -8,7 +8,7 @@ import (
 
 	larkdocx "github.com/larksuite/oapi-sdk-go/v3/service/docx/v1"
 
-	"github.com/KQAR/feishu-docs/internal/output"
+	"github.com/KQAR/feishu-docs-cli/internal/output"
 )
 
 func newDocCmd() *cobra.Command {

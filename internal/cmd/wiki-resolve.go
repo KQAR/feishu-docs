@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 
 	larkwiki "github.com/larksuite/oapi-sdk-go/v3/service/wiki/v2"
-	"github.com/KQAR/feishu-docs/internal/output"
+	"github.com/KQAR/feishu-docs-cli/internal/output"
 )
 
 // newWikiResolveCmd 解析 wiki URL/token 获取实际文档信息
@@ -84,13 +84,13 @@ func newWikiResolveCmd() *cobra.Command {
 			switch deref(node.ObjType) {
 			case "docx":
 				fmt.Printf("文档类型: 云文档 (docx)\n")
-				fmt.Printf("使用命令: feishu-docs doc get --id %s\n", deref(node.ObjToken))
+				fmt.Printf("使用命令: feishu-docs-cli doc get --id %s\n", deref(node.ObjToken))
 			case "sheet":
 				fmt.Printf("文档类型: 电子表格 (sheet)\n")
-				fmt.Printf("使用命令: feishu-docs sheet get --id %s (暂未实现)\n", deref(node.ObjToken))
+				fmt.Printf("使用命令: feishu-docs-cli sheet get --id %s (暂未实现)\n", deref(node.ObjToken))
 			case "bitable":
 				fmt.Printf("文档类型: 多维表格 (bitable)\n")
-				fmt.Printf("使用命令: feishu-docs bitable get --id %s (暂未实现)\n", deref(node.ObjToken))
+				fmt.Printf("使用命令: feishu-docs-cli bitable get --id %s (暂未实现)\n", deref(node.ObjToken))
 			case "mindnote":
 				fmt.Printf("文档类型: 思维笔记 (mindnote)\n")
 				fmt.Printf("暂不支持此类型文档\n")

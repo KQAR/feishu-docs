@@ -1,4 +1,4 @@
-module github.com/KQAR/feishu-docs
+module github.com/KQAR/feishu-docs-cli
 
 go 1.23
 
